@@ -1,0 +1,46 @@
+{
+  "name": "laravel-vision/laravel-vision",
+  "description": "Free, open-source toolkit for real-time image/video processing and AR for Laravel",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["laravel", "image", "video", "opencv", "ffmpeg", "ar", "vision"],
+  "require": {
+    "php": ">=8.1",
+    "illuminate/support": ">=10.0|>=11.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0 || ^9.0"
+  },
+  "suggest": {
+    "ext-gd": "For the GD image processor",
+    "ext-imagick": "For the Imagick image processor",
+    "php-ffmpeg/php-ffmpeg": "For the FFMpeg video processor",
+    "python3": "For optional Python bridge to advanced CV models"
+  },
+  "autoload": {
+    "psr-4": {
+      "LaravelVision\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaravelVision\\VisionServiceProvider"
+      ],
+      "aliases": {
+        "Vision": "LaravelVision\\Facades\\Vision"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
+
+{
+    "repositories": [
+      { "type": "path", "url": "/Users/yekta/Desktop/project/Backend/laravel-vision", "options": { "symlink": true } }
+    ],
+    "require": {
+      "laravel-vision/laravel-vision": "*"
+    }
+  }
