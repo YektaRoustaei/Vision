@@ -16,7 +16,11 @@ return [
     ],
 
     'advanced' => [
-        'driver' => env('VISION_ADVANCED_DRIVER', 'native'), // native|python
+        'driver' => env('VISION_ADVANCED_DRIVER', 'native'), // native only
+        'motion' => [
+            'fps' => env('VISION_MOTION_FPS', 2.0),
+            'scale' => env('VISION_MOTION_SCALE', 320),
+        ],
     ],
 ];
 

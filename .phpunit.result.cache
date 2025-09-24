@@ -1,0 +1,1 @@
+{"version":2,"defects":[],"times":{"LaravelVision\\Tests\\AdvancedNativeCvTest::test_detect_and_face_detect_return_arrays":0.005,"LaravelVision\\Tests\\AdvancedNativeCvTest::test_motion_tracker_handles_missing_video_gracefully":0,"LaravelVision\\Tests\\ImageVisionTest::test_chainable_filters_and_save_with_gd":0.002}}
