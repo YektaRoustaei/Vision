@@ -149,6 +149,32 @@ Notes
 - Put sample files at storage/app/example.jpg and storage/app/video.mp4 (Laravel) or project root for the standalone script.
 - If FFmpeg isn’t found, install it and ensure `ffmpeg`/`ffprobe` are on PATH or set VISION_FFMPEG_BINARY and VISION_FFPROBE_BINARY.
 
+## Live Camera Demo (Standalone)
+
+You can try a live webcam capture + processing + object detection demo without Laravel by using the built-in dev server.
+
+- Requirements: a browser with getUserMedia (Chrome/Firefox/Safari), PHP 8.1+, ext-gd
+- Run dev server from the project root:
+
+```bash
+php -S localhost:8000 dev-server.php
+```
+
+- Open in your browser:
+
+```
+http://localhost:8000/live-camera
+```
+
+What it does:
+- Starts/stops your webcam stream dynamically
+- Captures frames periodically and sends them to the server
+- Server applies resize, crop, grayscale, and brightness/contrast
+- Runs Vision native object detection on the processed frame
+- Returns detection results and URLs of processed images in real time
+
+Tip: Processed files are saved under tmp/ and are auto-served by the built-in web server.
+
 ## Quickstart
 
 ```php
